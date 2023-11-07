@@ -8,6 +8,10 @@ default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  database: postgres://sohutoueakai_fa_yan_xi_user:bv86FpkcvWrZ2xXiumDWgVGP05wwtRZh@dpg-ckegluea3ovc73cbrcpg-a/sohutoueakai_fa_yan_xi
+  username: bv86FpkcvWrZ2xXiumDWgVGP05wwtRZh
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
